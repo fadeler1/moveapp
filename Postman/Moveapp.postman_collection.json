@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "67ab8a41-409e-4ef0-9c76-ae1ed2fbf9fa",
+		"name": "Moveapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "moveapp - Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user",
+							"value": "pablo",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/moveapp/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"moveapp",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "moveapp - usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "moveapp - add usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoicGFibG8iLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjE5OTQ0NjAzLCJleHAiOjE2MTk5NDUyMDN9.4Gh82bmzmEo8Gcs3Tc7j0eNJ-7KHTkxb3wexlcHut0rbqdtc2Gr_8ppUdl3oCCzH4YkubB1nJGLM76ldA-rCCw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"email\": \"pablo@gmail.cl\",\r\n\t\"password\": \"M77uuuuiyuiy\",\r\n\t\"phones\": [\r\n\t\t{\r\n\t\t\t\"number\": \"56968449862\",\r\n\t\t\t\"cityCode\": \"1\",\r\n\t\t\t\"contryCode\": \"2\"\r\n\t\t}\r\n\t]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/moveapp/agregar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"moveapp",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "moveapp - idusuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
